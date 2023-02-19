@@ -25,7 +25,6 @@ class PaymentDetailsCollectionViewCell: UICollectionViewCell {
         viewHeader.layer.cornerRadius = 6
         viewHeader.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         viewDotted.makeDashedBorderLine(color: .black, strokeLength: 7, gapLength: 5, width: 1)
-        print("dot: \(viewDotted.bounds)")
     }
 
 }

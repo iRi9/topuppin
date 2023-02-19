@@ -18,17 +18,29 @@ class ConfirmationViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Loan Confirmation"
+
         setupNavigationBarIcon()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Loan Confirmation"
         setupCollectionView()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PaymentDetail",
+           let pin = pin, !pin.isEmpty {
+            if let navigationVC = segue.destination as? UINavigationController,
+               let paymentVC = navigationVC.topViewController as? PaymentDetailViewController {
+                paymentVC.loanData = loanData
+            }
+        }
+    }
+
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -39,7 +51,6 @@ class ConfirmationViewController: UIViewController {
             showWarningAlert(title: "Info", message: "Please input your PIN")
             return
         }
-        // TODO: - goto detail
     }
 
     func setupNavigationBarIcon() {
