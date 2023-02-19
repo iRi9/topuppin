@@ -1,0 +1,48 @@
+{
+  "phone":
+  {
+      "number": "",
+      "providerImage": "provider_indosat"
+  },
+  "nominals": [
+    {
+      "title": "Nominal :",
+      "subtitle": "25.000",
+      "buttonTitle": "Rp 25.000"
+    },
+    {
+      "title": "Nominal :",
+      "subtitle": "50.000",
+      "buttonTitle": "Rp 50.000"
+    },
+    {
+      "title": "Nominal :",
+      "subtitle": "100.000",
+      "buttonTitle": "Rp 100.000"
+    },
+    {
+      "title": "Nominal :",
+      "subtitle": "150.000",
+      "buttonTitle": "Rp 150.000"
+    },
+    {
+      "title": "Nominal :",
+      "subtitle": "195.000",
+      "buttonTitle": "Rp 195.000"
+    }
+  ],
+  "promos": [
+    {
+      "image": "xl"
+    },
+    {
+      "image": "im3"
+    },
+    {
+      "image": "telkomsel"
+    },
+    {
+      "image": "tri"
+    }
+  ]
+}

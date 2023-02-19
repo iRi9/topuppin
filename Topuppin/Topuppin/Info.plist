@@ -16,10 +16,17 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>Homepage</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+	<key>UINavigationBarAppearance</key>
+	<dict>
+		<key>backgroundColor</key>
+		<string>#289CED</string>
+	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
