@@ -133,6 +133,7 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
                 let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: NominalCollectionViewCell.identifier,
                     for: indexPath) as! NominalCollectionViewCell
+                cell.delegate = self
                 cell.hideSeparator(indexPath.item == homepageVM.nominals.count - 1)
                 cell.configure(with: homepageVM.nominals[indexPath.item])
                 return cell
@@ -190,5 +191,24 @@ extension DataPackageViewController: CNContactPickerDelegate {
         let phoneNumber = contact.phoneNumbers.first?.value.stringValue ?? ""
         phoneNumberModel.number = phoneNumber.replacingOccurrences(of: " ", with: "")
         isInputEmpty = !isValidPhoneNumber(phoneNumber)
+    }
+}
+
+// MARK: NominalCellDelegate -
+extension DataPackageViewController: NominalCellDelegate {
+    func didSelectNominal(at index: Int) {
+        let loanData = ConfirmationModel(phoneNumber: phoneNumberModel.number,
+                                         providerImage: phoneNumberModel.providerImage,
+                                         nominal: homepageVM.nominals[index].subtitle)
+        performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ConfirmationViewController" {
+            if let confirmationVC = segue.destination as? ConfirmationViewController,
+               let confirmationModel = sender as? ConfirmationModel {
+                confirmationVC.loanData = confirmationModel
+            }
+        }
     }
 }

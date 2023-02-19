@@ -112,11 +112,32 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ywt-Px-zcY" id="fej-aB-vWO"/>
+                        <segue destination="JZG-f1-NLX" kind="show" identifier="ConfirmationViewController" id="qOz-xc-gRC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odh-bl-4Rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719.8473282442746" y="-2.1126760563380285"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="60k-Tg-7up">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="JZG-f1-NLX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GzT-tp-CNx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDM-2Q-Egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="432"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="xrH-Tf-zbk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="vEv-Bg-mat" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T2j-HE-RZO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1t-Et-tyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="432"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0KG-8o-Iqg">
@@ -190,6 +211,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EKT-d4-2SE" id="Npa-GA-EVd"/>
+                        <segue destination="vEv-Bg-mat" kind="show" identifier="ConfirmationViewController" id="wAt-Ct-bAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELM-ML-ggg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
