@@ -166,6 +166,16 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
                                                   for: indexPath) as! FooterCollectionReusableView
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if isInputEmpty, indexPath.section == 1 {
+            performSegue(withIdentifier: "PromoViewController",
+                         sender: homepageVM.promos[indexPath.item])
+        } else if !isInputEmpty, indexPath.section == 2 {
+            performSegue(withIdentifier: "PromoViewController",
+                         sender: homepageVM.promos[indexPath.item])
+        }
+    }
 }
 // MARK: PhoneNumberCellDelegate -
 extension DataPackageViewController: PhoneNumberCellDelegate {
@@ -208,6 +218,11 @@ extension DataPackageViewController: NominalCellDelegate {
             if let confirmationVC = segue.destination as? ConfirmationViewController,
                let confirmationModel = sender as? ConfirmationModel {
                 confirmationVC.loanData = confirmationModel
+            }
+        } else if segue.identifier == "PromoViewController" {
+            if let promoVC = segue.destination as? PromoViewController,
+               let promoModel = sender as? Promo {
+                promoVC.promo = promoModel
             }
         }
     }

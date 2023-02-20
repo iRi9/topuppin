@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631C355429A368DF009E0982 /* String+RemoveCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C355329A368DF009E0982 /* String+RemoveCharacters.swift */; };
 		63CF28FF29A03F6500F2E20D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF28FE29A03F6500F2E20D /* AppDelegate.swift */; };
 		63CF290129A03F6500F2E20D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF290029A03F6500F2E20D /* SceneDelegate.swift */; };
 		63CF290629A03F6500F2E20D /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CF290429A03F6500F2E20D /* Homepage.storyboard */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.release.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.release.xcconfig"; sourceTree = "<group>"; };
+		631C355329A368DF009E0982 /* String+RemoveCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveCharacters.swift"; sourceTree = "<group>"; };
 		63CF28FB29A03F6500F2E20D /* Topuppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topuppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CF28FE29A03F6500F2E20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63CF290029A03F6500F2E20D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				63CF293329A1D1EF00F2E20D /* UIViewController+Alert.swift */,
 				63CF295729A2714500F2E20D /* UIView+DottedLine.swift */,
+				631C355329A368DF009E0982 /* String+RemoveCharacters.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				63CF28FF29A03F6500F2E20D /* AppDelegate.swift in Sources */,
 				63CF294929A20C2900F2E20D /* InfoCollectionViewCell.swift in Sources */,
 				63CF295C29A29FFE00F2E20D /* PaymentDetailViewController.swift in Sources */,
+				631C355429A368DF009E0982 /* String+RemoveCharacters.swift in Sources */,
 				63CF293429A1D1EF00F2E20D /* UIViewController+Alert.swift in Sources */,
 				63CF295129A26CB700F2E20D /* PinCollectionViewCell.swift in Sources */,
 				63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */,
