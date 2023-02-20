@@ -22,11 +22,10 @@ class PaymentDetailViewController: UIViewController {
     }
 
     @IBAction func didTapCloseBtn(_ sender: Any) {
-        dismiss(animated: true)
+        performSegue(withIdentifier: "gohome", sender: nil)
     }
 
     @IBAction func didTapOkBtn(_ sender: UIButton) {
-        
         performSegue(withIdentifier: "gohome", sender: nil)
     }
 

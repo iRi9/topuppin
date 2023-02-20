@@ -15,7 +15,7 @@ enum InfoType {
 class InfoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var lblInfo: UILabel!
+    @IBOutlet weak var tvInfo: UITextView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,16 +24,23 @@ class InfoCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(info: String, for type: InfoType = .primary) {
-        lblInfo.text = info
-        switch type {
-        case .primary:
-            cardView.backgroundColor = UIColor(named: "InfoColor")!
-            lblInfo.font = .boldSystemFont(ofSize: 12)
-            lblInfo.textColor = .black
-        case .secondary:
-            cardView.backgroundColor = UIColor(named: "HeaderColor")!
-            lblInfo.font = .systemFont(ofSize: 12)
-            lblInfo.textColor = .darkGray
-        }
+        cardView.backgroundColor = UIColor(named: type == .primary ? "InfoColor" : "HeaderColor")!
+        let infoAttribute = NSMutableAttributedString(string: info)
+        infoAttribute.addAttribute(.link,
+                                            value: "mailto:support@kredivo.com",
+                                            range: (infoAttribute.string as NSString)
+            .range(of: "support@kredivo.com"))
+        tvInfo.attributedText = infoAttribute
+        tvInfo.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "PrimaryColor")!]
+    }
+}
+
+// MARK: UITextViewDelegate -
+extension InfoCollectionViewCell: UITextViewDelegate {
+    func textView(_ textView: UITextView,
+                  shouldInteractWith URL: URL,
+                  in characterRange: NSRange,
+                  interaction: UITextItemInteraction) -> Bool {
+        return true
     }
 }

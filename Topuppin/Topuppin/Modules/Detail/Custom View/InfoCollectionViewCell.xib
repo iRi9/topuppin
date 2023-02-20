@@ -21,18 +21,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-20-Ksv">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP is not needed for first transaction of the day that less than Rp 200,000" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-Oi-Qdz">
-                                <rect key="frame" x="16" y="10.666666666666666" width="218" height="28.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ehp-Su-Fj5">
+                                <rect key="frame" x="16" y="5" width="218" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N82-cC-a1E"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" name="InfoColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="a0D-Oi-Qdz" secondAttribute="trailing" constant="16" id="5uZ-8a-d7a"/>
-                            <constraint firstItem="a0D-Oi-Qdz" firstAttribute="centerY" secondItem="Xr7-20-Ksv" secondAttribute="centerY" id="67n-xY-jjI"/>
-                            <constraint firstItem="a0D-Oi-Qdz" firstAttribute="leading" secondItem="Xr7-20-Ksv" secondAttribute="leading" constant="16" id="74G-vo-sth"/>
+                            <constraint firstAttribute="trailing" secondItem="ehp-Su-Fj5" secondAttribute="trailing" constant="16" id="Ztu-I6-bo3"/>
+                            <constraint firstItem="ehp-Su-Fj5" firstAttribute="centerY" secondItem="Xr7-20-Ksv" secondAttribute="centerY" id="uzD-PX-nF7"/>
+                            <constraint firstItem="ehp-Su-Fj5" firstAttribute="leading" secondItem="Xr7-20-Ksv" secondAttribute="leading" constant="16" id="zX8-Fb-JUZ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -46,14 +49,14 @@
             </constraints>
             <connections>
                 <outlet property="cardView" destination="Xr7-20-Ksv" id="EXn-qH-uDI"/>
-                <outlet property="lblInfo" destination="a0D-Oi-Qdz" id="s2e-Bm-7B4"/>
+                <outlet property="tvInfo" destination="ehp-Su-Fj5" id="b9m-lj-Tg0"/>
             </connections>
             <point key="canvasLocation" x="62.595419847328245" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="InfoColor">
-            <color red="1" green="0.98039215686274506" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.98000001907348633" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
