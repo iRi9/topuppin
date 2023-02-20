@@ -44,6 +44,17 @@
 		63CF295829A2714500F2E20D /* UIView+DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF295729A2714500F2E20D /* UIView+DottedLine.swift */; };
 		63CF295C29A29FFE00F2E20D /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF295B29A29FFE00F2E20D /* PaymentDetailViewController.swift */; };
 		63CF296229A2A6EA00F2E20D /* PaymentLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF296129A2A6EA00F2E20D /* PaymentLayout.swift */; };
+		63CF296529A2F31A00F2E20D /* Promo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CF296429A2F31A00F2E20D /* Promo.storyboard */; };
+		63CF296929A3062400F2E20D /* HeaderPromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF296729A3062400F2E20D /* HeaderPromoCollectionViewCell.swift */; };
+		63CF296A29A3062400F2E20D /* HeaderPromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF296829A3062400F2E20D /* HeaderPromoCollectionViewCell.xib */; };
+		63CF296D29A3079600F2E20D /* PromoDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF296B29A3079600F2E20D /* PromoDateCollectionViewCell.swift */; };
+		63CF296E29A3079600F2E20D /* PromoDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF296C29A3079600F2E20D /* PromoDateCollectionViewCell.xib */; };
+		63CF297129A3090400F2E20D /* VoucherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF296F29A3090400F2E20D /* VoucherCollectionViewCell.swift */; };
+		63CF297229A3090400F2E20D /* VoucherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF297029A3090400F2E20D /* VoucherCollectionViewCell.xib */; };
+		63CF297529A30F5800F2E20D /* TermConditionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297329A30F5800F2E20D /* TermConditionCollectionViewCell.swift */; };
+		63CF297629A30F5800F2E20D /* TermConditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */; };
+		63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297729A310D600F2E20D /* PromoViewController.swift */; };
+		63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297929A3121000F2E20D /* PromoLayout.swift */; };
 		A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +99,17 @@
 		63CF295729A2714500F2E20D /* UIView+DottedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DottedLine.swift"; sourceTree = "<group>"; };
 		63CF295B29A29FFE00F2E20D /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		63CF296129A2A6EA00F2E20D /* PaymentLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLayout.swift; sourceTree = "<group>"; };
+		63CF296429A2F31A00F2E20D /* Promo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Promo.storyboard; sourceTree = "<group>"; };
+		63CF296729A3062400F2E20D /* HeaderPromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPromoCollectionViewCell.swift; sourceTree = "<group>"; };
+		63CF296829A3062400F2E20D /* HeaderPromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderPromoCollectionViewCell.xib; sourceTree = "<group>"; };
+		63CF296B29A3079600F2E20D /* PromoDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		63CF296C29A3079600F2E20D /* PromoDateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoDateCollectionViewCell.xib; sourceTree = "<group>"; };
+		63CF296F29A3090400F2E20D /* VoucherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCollectionViewCell.swift; sourceTree = "<group>"; };
+		63CF297029A3090400F2E20D /* VoucherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoucherCollectionViewCell.xib; sourceTree = "<group>"; };
+		63CF297329A30F5800F2E20D /* TermConditionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermConditionCollectionViewCell.swift; sourceTree = "<group>"; };
+		63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermConditionCollectionViewCell.xib; sourceTree = "<group>"; };
+		63CF297729A310D600F2E20D /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
+		63CF297929A3121000F2E20D /* PromoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLayout.swift; sourceTree = "<group>"; };
 		D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topuppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.debug.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +180,7 @@
 			children = (
 				63CF291429A0453600F2E20D /* Homepage */,
 				63CF293529A1DCF000F2E20D /* Detail */,
+				63CF296329A2F2E200F2E20D /* Promo */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -231,6 +254,32 @@
 			path = "Custom View";
 			sourceTree = "<group>";
 		};
+		63CF296329A2F2E200F2E20D /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				63CF296629A2F4EE00F2E20D /* Custom View */,
+				63CF296429A2F31A00F2E20D /* Promo.storyboard */,
+				63CF297729A310D600F2E20D /* PromoViewController.swift */,
+				63CF297929A3121000F2E20D /* PromoLayout.swift */,
+			);
+			path = Promo;
+			sourceTree = "<group>";
+		};
+		63CF296629A2F4EE00F2E20D /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				63CF296729A3062400F2E20D /* HeaderPromoCollectionViewCell.swift */,
+				63CF296829A3062400F2E20D /* HeaderPromoCollectionViewCell.xib */,
+				63CF296B29A3079600F2E20D /* PromoDateCollectionViewCell.swift */,
+				63CF296C29A3079600F2E20D /* PromoDateCollectionViewCell.xib */,
+				63CF296F29A3090400F2E20D /* VoucherCollectionViewCell.swift */,
+				63CF297029A3090400F2E20D /* VoucherCollectionViewCell.xib */,
+				63CF297329A30F5800F2E20D /* TermConditionCollectionViewCell.swift */,
+				63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
 		E2E6FEABEABF6959CD906040 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,16 +349,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CF297229A3090400F2E20D /* VoucherCollectionViewCell.xib in Resources */,
 				63CF290B29A03F6800F2E20D /* LaunchScreen.storyboard in Resources */,
 				63CF292F29A1121C00F2E20D /* dummy.json in Resources */,
+				63CF296E29A3079600F2E20D /* PromoDateCollectionViewCell.xib in Resources */,
 				63CF290829A03F6800F2E20D /* Assets.xcassets in Resources */,
 				63CF293729A1DD1D00F2E20D /* Detail.storyboard in Resources */,
 				63CF295229A26CB700F2E20D /* PinCollectionViewCell.xib in Resources */,
 				63CF294A29A20C2900F2E20D /* InfoCollectionViewCell.xib in Resources */,
 				63CF292B29A08E1500F2E20D /* PhoneNumberCollectionViewCell.xib in Resources */,
 				63CF292529A0879900F2E20D /* PromotionCollectionViewCell.xib in Resources */,
+				63CF296A29A3062400F2E20D /* HeaderPromoCollectionViewCell.xib in Resources */,
 				63CF290629A03F6500F2E20D /* Homepage.storyboard in Resources */,
 				63CF295629A26CD300F2E20D /* OrderDetailCollectionViewCell.xib in Resources */,
+				63CF296529A2F31A00F2E20D /* Promo.storyboard in Resources */,
+				63CF297629A30F5800F2E20D /* TermConditionCollectionViewCell.xib in Resources */,
 				63CF294629A203C700F2E20D /* ConfirmationPhoneCollectionViewCell.xib in Resources */,
 				63CF292129A0809000F2E20D /* NominalCollectionViewCell.xib in Resources */,
 				63CF294E29A26C2300F2E20D /* PaymentDetailsCollectionViewCell.xib in Resources */,
@@ -370,18 +424,24 @@
 				63CF294529A203C700F2E20D /* ConfirmationPhoneCollectionViewCell.swift in Sources */,
 				63CF291829A054E200F2E20D /* PulsaViewController.swift in Sources */,
 				63CF292D29A0D4D100F2E20D /* HomepageLayout.swift in Sources */,
+				63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */,
 				63CF28FF29A03F6500F2E20D /* AppDelegate.swift in Sources */,
 				63CF294929A20C2900F2E20D /* InfoCollectionViewCell.swift in Sources */,
 				63CF295C29A29FFE00F2E20D /* PaymentDetailViewController.swift in Sources */,
 				63CF293429A1D1EF00F2E20D /* UIViewController+Alert.swift in Sources */,
 				63CF295129A26CB700F2E20D /* PinCollectionViewCell.swift in Sources */,
+				63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */,
+				63CF296929A3062400F2E20D /* HeaderPromoCollectionViewCell.swift in Sources */,
 				63CF290129A03F6500F2E20D /* SceneDelegate.swift in Sources */,
 				63CF293129A114B100F2E20D /* HomepageViewModel.swift in Sources */,
+				63CF297129A3090400F2E20D /* VoucherCollectionViewCell.swift in Sources */,
+				63CF297529A30F5800F2E20D /* TermConditionCollectionViewCell.swift in Sources */,
 				63CF291A29A054F900F2E20D /* DataPackageViewController.swift in Sources */,
 				63CF294229A2027600F2E20D /* ConfirmationLayout.swift in Sources */,
 				63CF292729A0898000F2E20D /* HeaderPromoCollectionReusableView.swift in Sources */,
 				63CF291D29A07FAD00F2E20D /* FooterCollectionReusableView.swift in Sources */,
 				63CF291629A0492200F2E20D /* HomepageViewController.swift in Sources */,
+				63CF296D29A3079600F2E20D /* PromoDateCollectionViewCell.swift in Sources */,
 				63CF292429A0879900F2E20D /* PromotionCollectionViewCell.swift in Sources */,
 				63CF296229A2A6EA00F2E20D /* PaymentLayout.swift in Sources */,
 				63CF292A29A08E1500F2E20D /* PhoneNumberCollectionViewCell.swift in Sources */,
