@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TermConditionCollectionViewCell" id="gTV-IL-0wX" customClass="TermConditionCollectionViewCell" customModule="Topuppin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHt-ZD-YsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMb-cf-c2Q">
+                                <rect key="frame" x="16" y="16" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5r6-sJ-r5C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQT-Zc-ZXi">
+                                <rect key="frame" x="16" y="53" width="288" height="31"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uQT-Zc-ZXi" secondAttribute="trailing" constant="16" id="2qc-Tk-Z5m"/>
+                            <constraint firstItem="uQT-Zc-ZXi" firstAttribute="top" secondItem="BMb-cf-c2Q" secondAttribute="bottom" constant="16" id="5zM-HR-Gja"/>
+                            <constraint firstItem="BMb-cf-c2Q" firstAttribute="top" secondItem="dHt-ZD-YsJ" secondAttribute="top" constant="16" id="C2a-to-WYR"/>
+                            <constraint firstAttribute="trailing" secondItem="BMb-cf-c2Q" secondAttribute="trailing" constant="16" id="Jbd-ZS-bLU"/>
+                            <constraint firstItem="uQT-Zc-ZXi" firstAttribute="leading" secondItem="dHt-ZD-YsJ" secondAttribute="leading" constant="16" id="Zqz-m5-kPc"/>
+                            <constraint firstAttribute="bottom" secondItem="uQT-Zc-ZXi" secondAttribute="bottom" constant="16" id="jqP-ta-HaT"/>
+                            <constraint firstItem="BMb-cf-c2Q" firstAttribute="leading" secondItem="dHt-ZD-YsJ" secondAttribute="leading" constant="16" id="xfS-GX-ljQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dHt-ZD-YsJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wu9-uC-0Hu"/>
+                <constraint firstAttribute="bottom" secondItem="dHt-ZD-YsJ" secondAttribute="bottom" id="a5p-Xq-wzC"/>
+                <constraint firstAttribute="trailing" secondItem="dHt-ZD-YsJ" secondAttribute="trailing" id="hVS-Lt-KMD"/>
+                <constraint firstItem="dHt-ZD-YsJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uj0-qP-D6V"/>
+            </constraints>
+            <connections>
+                <outlet property="lblTermCondition" destination="uQT-Zc-ZXi" id="FoZ-xm-mVB"/>
+                <outlet property="lblTitle" destination="BMb-cf-c2Q" id="Fn9-fM-T1t"/>
+            </connections>
+            <point key="canvasLocation" x="62.595419847328245" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

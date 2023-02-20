@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InfoCollectionViewCell" id="gTV-IL-0wX" customClass="InfoCollectionViewCell" customModule="Topuppin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-20-Ksv">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehp-Su-Fj5">
+                                <rect key="frame" x="16" y="5" width="218" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N82-cC-a1E"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="InfoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ehp-Su-Fj5" secondAttribute="trailing" constant="16" id="Ztu-I6-bo3"/>
+                            <constraint firstItem="ehp-Su-Fj5" firstAttribute="centerY" secondItem="Xr7-20-Ksv" secondAttribute="centerY" id="uzD-PX-nF7"/>
+                            <constraint firstItem="ehp-Su-Fj5" firstAttribute="leading" secondItem="Xr7-20-Ksv" secondAttribute="leading" constant="16" id="zX8-Fb-JUZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Xr7-20-Ksv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="B0w-Y0-NeH"/>
+                <constraint firstItem="Xr7-20-Ksv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KPv-D3-uIz"/>
+                <constraint firstAttribute="trailing" secondItem="Xr7-20-Ksv" secondAttribute="trailing" id="V45-VI-YRJ"/>
+                <constraint firstAttribute="bottom" secondItem="Xr7-20-Ksv" secondAttribute="bottom" id="irE-Em-j64"/>
+            </constraints>
+            <connections>
+                <outlet property="cardView" destination="Xr7-20-Ksv" id="EXn-qH-uDI"/>
+                <outlet property="tvInfo" destination="ehp-Su-Fj5" id="b9m-lj-Tg0"/>
+            </connections>
+            <point key="canvasLocation" x="62.595419847328245" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="InfoColor">
+            <color red="1" green="0.98000001907348633" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
