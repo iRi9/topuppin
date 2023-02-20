@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-7I-g7N">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="140.66666666666666"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-D6-yKK">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="140.66666666666666"/>
@@ -27,8 +27,10 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EdU-D6-yKK" firstAttribute="leading" secondItem="yrs-7I-g7N" secondAttribute="leading" id="1Ua-w1-dCb"/>
+                            <constraint firstAttribute="height" secondItem="EdU-D6-yKK" secondAttribute="height" id="5xj-Wi-CPv"/>
                             <constraint firstAttribute="trailing" secondItem="EdU-D6-yKK" secondAttribute="trailing" id="9UY-i8-6cd"/>
                             <constraint firstItem="EdU-D6-yKK" firstAttribute="top" secondItem="yrs-7I-g7N" secondAttribute="top" id="BNq-sf-qxf"/>
                         </constraints>
@@ -37,7 +39,6 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="yrs-7I-g7N" secondAttribute="bottom" id="F4h-Ca-RvW"/>
                 <constraint firstAttribute="trailing" secondItem="yrs-7I-g7N" secondAttribute="trailing" id="FM9-na-sLU"/>
                 <constraint firstItem="yrs-7I-g7N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bNG-Hb-Ntg"/>
                 <constraint firstItem="yrs-7I-g7N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dwO-rg-rkL"/>

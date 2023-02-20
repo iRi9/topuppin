@@ -14,6 +14,9 @@ class PromotionCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        viewContent.layer.cornerRadius = 4
+        viewContent.layer.borderWidth = 2
+        viewContent.layer.borderColor = UIColor.systemGray6.cgColor
         imgvPromo.layer.cornerRadius = 4
     }
 

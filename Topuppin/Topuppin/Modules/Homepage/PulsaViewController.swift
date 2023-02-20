@@ -184,10 +184,10 @@ extension PulsaViewController: PhoneNumberCellDelegate {
 
     func getPhoneNumber(_ phoneNumber: String?) {
         phoneNumberModel.number = phoneNumber ?? ""
-        isInputEmpty = !isValidPhoneNumber(phoneNumber)
+        isInputEmpty = !isValidPhoneNumber(phoneNumber ?? "")
     }
 
-    func isValidPhoneNumber(_ phoneNumber: String?) -> Bool {
+    func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
         let regularExpressionForPhone = "^(\\+62|62|0)8[1-9][0-9]{7,12}$"
         let testPhone = NSPredicate(format:"SELF MATCHES %@", regularExpressionForPhone)
         return testPhone.evaluate(with: phoneNumber)
@@ -198,7 +198,7 @@ extension PulsaViewController: PhoneNumberCellDelegate {
 extension PulsaViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         let phoneNumber = contact.phoneNumbers.first?.value.stringValue ?? ""
-        phoneNumberModel.number = phoneNumber.replacingOccurrences(of: " ", with: "")
+        phoneNumberModel.number = phoneNumber.stringByRemovingAll(characters: [" ", "-"])
         isInputEmpty = !isValidPhoneNumber(phoneNumber)
     }
 }

@@ -19,7 +19,7 @@ extension UIView {
         shapeLayer.lineDashPattern = [strokeLength, gapLength]
 
         path.addLines(between: [CGPoint(x: 0, y: bounds.midY),
-                                CGPoint(x: self.bounds.width, y: bounds.midY)])
+                                CGPoint(x: self.bounds.width + 30, y: bounds.midY)])
 
         shapeLayer.path = path
         layer.addSublayer(shapeLayer)

@@ -26,12 +26,14 @@ class InfoCollectionViewCell: UICollectionViewCell {
     func configure(info: String, for type: InfoType = .primary) {
         cardView.backgroundColor = UIColor(named: type == .primary ? "InfoColor" : "HeaderColor")!
         let infoAttribute = NSMutableAttributedString(string: info)
-        infoAttribute.addAttribute(.link,
-                                            value: "mailto:support@kredivo.com",
-                                            range: (infoAttribute.string as NSString)
-            .range(of: "support@kredivo.com"))
+        if type == .secondary {
+            infoAttribute.addAttribute(.link,
+                                       value: "mailto:support@kredivo.com",
+                                       range: (infoAttribute.string as NSString)
+                .range(of: "support@kredivo.com"))
+            tvInfo.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "PrimaryColor")!]
+        }
         tvInfo.attributedText = infoAttribute
-        tvInfo.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "PrimaryColor")!]
     }
 }
 
