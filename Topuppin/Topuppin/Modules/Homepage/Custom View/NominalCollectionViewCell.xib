@@ -53,6 +53,9 @@
                                         <buttonConfiguration key="configuration" style="plain">
                                             <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapNominalBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="sZd-kc-AUQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -96,7 +99,7 @@
     </objects>
     <resources>
         <namedColor name="PrimaryColor">
-            <color red="0.15686274509803921" green="0.61176470588235299" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15700000524520874" green="0.6119999885559082" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

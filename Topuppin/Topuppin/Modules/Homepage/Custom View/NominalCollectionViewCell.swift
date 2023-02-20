@@ -13,7 +13,13 @@ struct NominalModel: Decodable {
     let buttonTitle: String
 }
 
+protocol NominalCellDelegate {
+    func didSelectNominal(at index: Int)
+}
+
 class NominalCollectionViewCell: UICollectionViewCell {
+
+    var delegate: NominalCellDelegate?
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubtitle: UILabel!
@@ -33,6 +39,16 @@ class NominalCollectionViewCell: UICollectionViewCell {
 
     func hideSeparator(_ state: Bool = false) {
         viewSeparator.isHidden = state
+    }
+
+    @IBAction func didTapNominalBtn(_ sender: UIButton) {
+        guard let collectionView = superview as? UICollectionView else {
+            return
+        }
+        guard let indexPath = collectionView.indexPath(for: self) else {
+            return
+        }
+        delegate?.didSelectNominal(at: indexPath.item)
     }
 
 }
