@@ -16,4 +16,8 @@ struct HomepageViewModel: Decodable {
 
 struct Promo: Decodable {
     let image: String
+    let title: String
+    let promoPeriod: String
+    let promoCode: String
+    let termConditions: [String]
 }
