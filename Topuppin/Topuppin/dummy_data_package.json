@@ -1,0 +1,80 @@
+{
+  "phone":
+  {
+      "number": "",
+      "providerImage": "provider_indosat"
+  },
+  "packages": [
+    {
+      "title": "Paket Data S :",
+      "subtitle": "25.000",
+      "buttonTitle": "Rp 25.000"
+    },
+    {
+      "title": "Paket Data M :",
+      "subtitle": "50.000",
+      "buttonTitle": "Rp 50.000"
+    },
+    {
+      "title": "Paket Data L :",
+      "subtitle": "100.000",
+      "buttonTitle": "Rp 100.000"
+    },
+    {
+      "title": "Paket Data XL :",
+      "subtitle": "150.000",
+      "buttonTitle": "Rp 150.000"
+    },
+    {
+      "title": "Paket Data XXL :",
+      "subtitle": "195.000",
+      "buttonTitle": "Rp 195.000"
+    }
+  ],
+  "promos": [
+    {
+      "image": "xl",
+      "title" : "XTRA COMBO FLEX #LebihBebasPilih Diskon 25%",
+      "promoPeriod" : "Agustus 2023",
+      "promoCode" : "BEBASPILIH25",
+      "termConditions" : [
+          "Promo hanya berlaku untuk transaksi yang dilakukan di aplikasi.",
+          "Gunakan kode BEBASPILIH25 untuk mendapatkan diskon 25%.",
+          "Setiap pengguna bisa menggunakan promo sebanyak 1 (satu) kali per hari dan maksimal 2 (dua) kali selama periode Promo."
+      ]
+    },
+    {
+      "image": "im3",
+      "title" : "Freedom Combo INTERNETAN & LOKAL",
+      "promoPeriod" : "17 - 20 Agustus 2023",
+      "promoCode" : "FREEDOM25",
+      "termConditions" : [
+          "Promo hanya berlaku untuk transaksi yang dilakukan di aplikasi.",
+          "Gunakan kode FREEDOM25 untuk mendapatkan cashback 25%",
+          "Setiap pengguna bisa menggunakan promo sebanyak 1 (satu) kali per hari dan maksimal 2 (dua) kali selama periode Promo.",
+      ]
+    },
+    {
+      "image": "telkomsel",
+      "title" : "PESTA KUOTA ISI PULSA DAPAT KUOTA 10GB",
+      "promoPeriod" : "15 April 2023",
+      "promoCode" : "PESTAKUOTA",
+      "termConditions" : [
+          "Promo hanya berlaku untuk transaksi yang dilakukan di aplikasi.",
+          "Gunakan kode PESTAKUOTA untuk mendapatkan telkomsel poin.",
+          "Setiap pengguna bisa menggunakan promo sebanyak 1 (satu) kali per hari dan maksimal 2 (dua) kali selama periode Promo.",
+      ]
+    },
+    {
+      "image": "tri",
+      "title" : "HOT SALE - Promo Kuota di Bulan Penuh Cinta",
+      "promoPeriod" : "Februari 2023",
+      "promoCode" : "CINTAKUOTA",
+      "termConditions" : [
+          "Promo hanya berlaku untuk transaksi yang dilakukan di aplikasi.",
+          "Gunakan kode CINTAKUOTA untuk mendapatkan diskon menarik.",
+          "Setiap pengguna bisa menggunakan promo sebanyak 1 (satu) kali per hari dan maksimal 2 (dua) kali selama periode Promo."
+      ]
+    }
+  ]
+}
