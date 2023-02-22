@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct PaymentDetailModel {
+    let productName: String
+    let productPrice: Int
+    let adminFee: Int
+}
+
 class PaymentDetailsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var viewCard: UIView!
@@ -25,6 +31,18 @@ class PaymentDetailsCollectionViewCell: UICollectionViewCell {
         viewHeader.layer.cornerRadius = 6
         viewHeader.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         viewDotted.makeDashedBorderLine(color: .black, strokeLength: 7, gapLength: 5, width: 1)
+    }
+
+    func configure(with model: PaymentDetailModel) {
+        lblProductName.text = model.productName
+        lblProductPrice.text = Helper.shared.formatToRp(price: model.productPrice)
+        lblAdminPrice.text = Helper.shared.formatToRp(price: model.adminFee)
+        lblTotal.text = calculateTotalOrder(model.productPrice, model.adminFee)
+    }
+
+    private func calculateTotalOrder(_ productPrice: Int, _ adminFee: Int) -> String {
+        let totalPrice = productPrice + adminFee
+        return Helper.shared.formatToRp(price: totalPrice)
     }
 
 }

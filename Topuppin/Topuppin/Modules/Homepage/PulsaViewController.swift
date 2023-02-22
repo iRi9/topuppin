@@ -206,9 +206,12 @@ extension PulsaViewController: CNContactPickerDelegate {
 // MARK: NominalCellDelegate -
 extension PulsaViewController: NominalCellDelegate {
     func didSelectNominal(at index: Int) {
+        let nominal = pulsaModel.nominals[index]
         let loanData = ConfirmationModel(phoneNumber: phoneNumberModel.number,
                                          providerImage: phoneNumberModel.providerImage,
-                                         nominal: pulsaModel.nominals[index].subtitle)
+                                         order: PaymentDetailModel(productName: "Pulsa",
+                                                                   productPrice: nominal.buttonTitle,
+                                                                   adminFee: 0))
         performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
     }
 

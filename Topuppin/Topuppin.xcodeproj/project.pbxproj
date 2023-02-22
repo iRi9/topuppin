@@ -57,6 +57,7 @@
 		63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297729A310D600F2E20D /* PromoViewController.swift */; };
 		63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297929A3121000F2E20D /* PromoLayout.swift */; };
 		63EF8F8A29A57D1B009AF29D /* dummy_data_package.json in Resources */ = {isa = PBXBuildFile; fileRef = 63EF8F8929A57D1B009AF29D /* dummy_data_package.json */; };
+		63EF8F8D29A5A7C8009AF29D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8F8C29A5A7C8009AF29D /* Helper.swift */; };
 		A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		63CF297729A310D600F2E20D /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		63CF297929A3121000F2E20D /* PromoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLayout.swift; sourceTree = "<group>"; };
 		63EF8F8929A57D1B009AF29D /* dummy_data_package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummy_data_package.json; sourceTree = "<group>"; };
+		63EF8F8C29A5A7C8009AF29D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topuppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.debug.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 		63CF28FD29A03F6500F2E20D /* Topuppin */ = {
 			isa = PBXGroup;
 			children = (
+				63EF8F8B29A5A7B5009AF29D /* Helper */,
 				63CF293229A1D1D100F2E20D /* Extenstions */,
 				63CF291329A0451D00F2E20D /* Modules */,
 				63CF291229A044F100F2E20D /* Base */,
@@ -284,6 +287,14 @@
 				63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */,
 			);
 			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		63EF8F8B29A5A7B5009AF29D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				63EF8F8C29A5A7C8009AF29D /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E2E6FEABEABF6959CD906040 /* Pods */ = {
@@ -433,6 +444,7 @@
 				63CF292D29A0D4D100F2E20D /* HomepageLayout.swift in Sources */,
 				63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */,
 				63CF28FF29A03F6500F2E20D /* AppDelegate.swift in Sources */,
+				63EF8F8D29A5A7C8009AF29D /* Helper.swift in Sources */,
 				63CF294929A20C2900F2E20D /* InfoCollectionViewCell.swift in Sources */,
 				63CF295C29A29FFE00F2E20D /* PaymentDetailViewController.swift in Sources */,
 				631C355429A368DF009E0982 /* String+RemoveCharacters.swift in Sources */,

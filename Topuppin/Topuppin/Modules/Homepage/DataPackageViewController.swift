@@ -207,9 +207,12 @@ extension DataPackageViewController: CNContactPickerDelegate {
 // MARK: NominalCellDelegate -
 extension DataPackageViewController: NominalCellDelegate {
     func didSelectNominal(at index: Int) {
+        let dataPackage = dataPackageModel.packages[index]
         let loanData = ConfirmationModel(phoneNumber: phoneNumberModel.number,
                                          providerImage: phoneNumberModel.providerImage,
-                                         nominal: dataPackageModel.packages[index].subtitle)
+                                         order: PaymentDetailModel(productName: dataPackage.title,
+                                                                   productPrice: dataPackage.buttonTitle,
+                                                                   adminFee: 0))
         performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
     }
 

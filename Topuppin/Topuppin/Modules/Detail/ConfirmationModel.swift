@@ -10,5 +10,5 @@ import Foundation
 struct ConfirmationModel {
     let phoneNumber: String
     let providerImage: String?
-    let nominal: String
+    let order: PaymentDetailModel
 }
