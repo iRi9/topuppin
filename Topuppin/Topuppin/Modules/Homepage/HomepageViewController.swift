@@ -13,8 +13,10 @@ class HomepageViewController: UIViewController {
         let viewPager = ViewPager(tabSizeConfiguration: .fillEqually(height: 60, spacing: 0))
         let storyboard = UIStoryboard(name: "Homepage", bundle: nil)
 
-        let pulsaVC = storyboard.instantiateViewController(withIdentifier: "PulsaViewController")
-        let dataPackageVC = storyboard.instantiateViewController(withIdentifier: "DataPackageViewController")
+        let pulsaVC = storyboard.instantiateViewController(withIdentifier: "PulsaViewController") as! PulsaViewController
+        pulsaVC.delegate = self
+        let dataPackageVC = storyboard.instantiateViewController(withIdentifier: "DataPackageViewController") as! DataPackageViewController
+        dataPackageVC.delegate = self
 
         viewPager.tabbedView.tabs = [
             TabItemView(title: "Pulsa"),
@@ -43,4 +45,20 @@ class HomepageViewController: UIViewController {
         ])
     }
 
+}
+
+extension HomepageViewController: PulsaDelegate, DataPackageaDelegate {
+    func didSeletPromotion(promo: Promo) {
+        let storyboard = UIStoryboard(name: "Promo", bundle: nil)
+        let promoVC = storyboard.instantiateViewController(withIdentifier: "PromoViewController") as! PromoViewController
+        promoVC.promo = promo
+        self.navigationController?.pushViewController(promoVC, animated: true)
+    }
+
+    func didSelectNominal(loanData: ConfirmationModel) {
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        let confirmationVC = storyboard.instantiateViewController(withIdentifier: "ConfirmationViewController") as! ConfirmationViewController
+        confirmationVC.loanData = loanData
+        self.navigationController?.pushViewController(confirmationVC, animated: true)
+    }
 }

@@ -8,7 +8,14 @@
 import UIKit
 import ContactsUI
 
+protocol DataPackageaDelegate: AnyObject {
+    func didSelectNominal(loanData: ConfirmationModel)
+    func didSeletPromotion(promo: Promo)
+}
+
 class DataPackageViewController: UIViewController {
+
+    weak var delegate: DataPackageaDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -163,12 +170,8 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if isInputEmpty, indexPath.section == 1 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: dataPackageModel.promos[indexPath.item])
-        } else if !isInputEmpty, indexPath.section == 2 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: dataPackageModel.promos[indexPath.item])
+        if (isInputEmpty && indexPath.section == 1) || (!isInputEmpty && indexPath.section == 2) {
+            delegate?.didSeletPromotion(promo: dataPackageModel.promos[indexPath.item])
         }
     }
 }
@@ -208,20 +211,6 @@ extension DataPackageViewController: NominalCellDelegate {
                                          order: PaymentDetailModel(productName: dataPackage.title,
                                                                    productPrice: dataPackage.buttonTitle,
                                                                    adminFee: 0))
-        performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ConfirmationViewController" {
-            if let confirmationVC = segue.destination as? ConfirmationViewController,
-               let confirmationModel = sender as? ConfirmationModel {
-                confirmationVC.loanData = confirmationModel
-            }
-        } else if segue.identifier == "PromoViewController" {
-            if let promoVC = segue.destination as? PromoViewController,
-               let promoModel = sender as? Promo {
-                promoVC.promo = promoModel
-            }
-        }
+        delegate?.didSelectNominal(loanData: loanData)
     }
 }
