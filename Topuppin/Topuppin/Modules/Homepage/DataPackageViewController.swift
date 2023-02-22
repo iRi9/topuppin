@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import ContactsUI
 
-class DataPackageViewController: UIViewController, IndicatorInfoProvider {
+class DataPackageViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -33,10 +32,6 @@ class DataPackageViewController: UIViewController, IndicatorInfoProvider {
         isInputEmpty = phoneNumberModel.number.isEmpty
         setupCollectionView()
         setupCollectionLayout()
-    }
-
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Data Package")
     }
 
     func setupCollectionView() {

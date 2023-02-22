@@ -64,11 +64,9 @@
 		63EF8FCC29A66086009AF29D /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCB29A66086009AF29D /* TabCollectionViewCell.swift */; };
 		63EF8FCE29A660B8009AF29D /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCD29A660B8009AF29D /* TabItemView.swift */; };
 		63EF8FD029A66131009AF29D /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCF29A66131009AF29D /* PageCollectionViewCell.swift */; };
-		A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.release.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.release.xcconfig"; sourceTree = "<group>"; };
 		631C355329A368DF009E0982 /* String+RemoveCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveCharacters.swift"; sourceTree = "<group>"; };
 		63CF28FB29A03F6500F2E20D /* Topuppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topuppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CF28FE29A03F6500F2E20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,8 +126,6 @@
 		63EF8FCB29A66086009AF29D /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		63EF8FCD29A660B8009AF29D /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		63EF8FCF29A66131009AF29D /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
-		D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topuppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.debug.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,28 +133,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CAC7B89DE7B2F3F89344DA1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		63CF28F229A03F6500F2E20D = {
 			isa = PBXGroup;
 			children = (
 				63CF28FD29A03F6500F2E20D /* Topuppin */,
 				63CF28FC29A03F6500F2E20D /* Products */,
-				E2E6FEABEABF6959CD906040 /* Pods */,
-				2CAC7B89DE7B2F3F89344DA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,15 +308,6 @@
 			path = Viewpager;
 			sourceTree = "<group>";
 		};
-		E2E6FEABEABF6959CD906040 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */,
-				49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,11 +315,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63CF290F29A03F6800F2E20D /* Build configuration list for PBXNativeTarget "Topuppin" */;
 			buildPhases = (
-				AE7F69A3E1624C5F9D0EAA98 /* [CP] Check Pods Manifest.lock */,
 				63CF28F729A03F6500F2E20D /* Sources */,
 				63CF28F829A03F6500F2E20D /* Frameworks */,
 				63CF28F929A03F6500F2E20D /* Resources */,
-				6D145598E7198AB8063D5CB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,48 +389,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6D145598E7198AB8063D5CB2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE7F69A3E1624C5F9D0EAA98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Topuppin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63CF28F729A03F6500F2E20D /* Sources */ = {
@@ -642,7 +574,6 @@
 		};
 		63CF291029A03F6800F2E20D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -676,7 +607,6 @@
 		};
 		63CF291129A03F6800F2E20D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import ContactsUI
 
-class PulsaViewController: UIViewController, IndicatorInfoProvider {
+class PulsaViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -33,10 +32,6 @@ class PulsaViewController: UIViewController, IndicatorInfoProvider {
         isInputEmpty = phoneNumberModel.number.isEmpty
         setupCollectionView()
         setupCollectionLayout()
-    }
-
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Pulsa")
     }
 
     func setupCollectionView() {
