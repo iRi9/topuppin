@@ -19,27 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zp-QE-eaO">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="5Hl-OR-BqN"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="3jK-c3-eix"/>
-                            </scrollView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="epj-BT-ODu" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="103" width="393" height="64"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="PYg-Zw-5G2"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pOc-BJ-7am">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-va-jrF" userLabel="Separator View">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-va-jrF" userLabel="Separator View">
                                 <rect key="frame" x="0.0" y="167" width="393" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -49,24 +29,8 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="aLr-va-jrF" firstAttribute="trailing" secondItem="epj-BT-ODu" secondAttribute="trailing" id="3L5-ib-unn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="epj-BT-ODu" secondAttribute="trailing" id="Awr-eq-V94"/>
-                            <constraint firstItem="4Zp-QE-eaO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Fg8-zL-2Bb"/>
-                            <constraint firstItem="aLr-va-jrF" firstAttribute="top" secondItem="epj-BT-ODu" secondAttribute="bottom" id="N3o-xT-bCg"/>
-                            <constraint firstItem="4Zp-QE-eaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T32-jU-OCO"/>
-                            <constraint firstAttribute="bottom" secondItem="4Zp-QE-eaO" secondAttribute="bottom" id="ckE-DV-xmc"/>
-                            <constraint firstItem="epj-BT-ODu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="czF-HF-JeJ"/>
-                            <constraint firstItem="aLr-va-jrF" firstAttribute="leading" secondItem="epj-BT-ODu" secondAttribute="leading" id="khF-kB-9Oo"/>
-                            <constraint firstItem="4Zp-QE-eaO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yfr-4Z-Eg7"/>
-                            <constraint firstItem="epj-BT-ODu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zFc-Az-Pxt"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Top Up" largeTitleDisplayMode="never" id="4wG-d2-eI9"/>
-                    <connections>
-                        <outlet property="buttonBarView" destination="epj-BT-ODu" id="PZX-4q-6QD"/>
-                        <outlet property="containerView" destination="4Zp-QE-eaO" id="vFy-4k-u9g"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

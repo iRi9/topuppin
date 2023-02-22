@@ -6,40 +6,41 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 
-class HomepageViewController: ButtonBarPagerTabStripViewController {
+class HomepageViewController: UIViewController {
 
-    let purpleInspireColor = UIColor.red
+    lazy var viewPager: ViewPager = {
+        let viewPager = ViewPager(tabSizeConfiguration: .fillEqually(height: 60, spacing: 0))
+        let storyboard = UIStoryboard(name: "Homepage", bundle: nil)
+
+        let pulsaVC = storyboard.instantiateViewController(withIdentifier: "PulsaViewController")
+        let dataPackageVC = storyboard.instantiateViewController(withIdentifier: "DataPackageViewController")
+
+        viewPager.tabbedView.tabs = [
+            TabItemView(title: "Pulsa"),
+            TabItemView(title: "Data Package")
+        ]
+
+        viewPager.pagedView.pages = [
+            pulsaVC,
+            dataPackageVC
+        ]
+
+        viewPager.translatesAutoresizingMaskIntoConstraints = false
+        return viewPager
+    }()
 
     override func viewDidLoad() {
-        setupPagerTab()
         super.viewDidLoad()
-    }
 
-    func setupPagerTab() {
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.selectedBarBackgroundColor = UIColor(named: "SecondaryColor")!
-        settings.style.buttonBarItemFont = .systemFont(ofSize: 14)
-        settings.style.selectedBarHeight = 3
-        settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemsShouldFillAvailableWidth = true
-        settings.style.buttonBarRightContentInset = 0
-        settings.style.buttonBarLeftContentInset = 0
-        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
-            guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = .systemGray
-            oldCell?.label.font = .systemFont(ofSize: 14)
-            newCell?.label.textColor = UIColor(named: "SecondaryColor")!
-            newCell?.label.font = .boldSystemFont(ofSize: 14)
-        }
-    }
+        self.view.addSubview(viewPager)
 
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let pulsaVC = UIStoryboard(name: "Homepage", bundle: nil).instantiateViewController(withIdentifier: "PulsaViewController")
-        let dataVC = UIStoryboard(name: "Homepage", bundle: nil).instantiateViewController(withIdentifier: "DataPackageViewController")
-        return [pulsaVC, dataVC]
+        NSLayoutConstraint.activate([
+            viewPager.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            viewPager.heightAnchor.constraint(equalTo: self.view.heightAnchor),
+            viewPager.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            viewPager.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+        ])
     }
 
 }
