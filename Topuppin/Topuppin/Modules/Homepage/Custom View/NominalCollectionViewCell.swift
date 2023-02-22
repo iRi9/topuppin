@@ -10,7 +10,7 @@ import UIKit
 struct NominalModel: Decodable {
     let title: String
     let subtitle: String
-    let buttonTitle: String
+    let buttonTitle: Int
 }
 
 protocol NominalCellDelegate {
@@ -34,7 +34,8 @@ class NominalCollectionViewCell: UICollectionViewCell {
     func configure(with nominal: NominalModel) {
         lblTitle.text = nominal.title
         lblSubtitle.text = nominal.subtitle
-        btnNominal.setTitle(nominal.buttonTitle, for: .normal)
+        let priceTitle = Helper.shared.formatToRp(price: nominal.buttonTitle)
+        btnNominal.setTitle(priceTitle, for: .normal)
     }
 
     func hideSeparator(_ state: Bool = false) {

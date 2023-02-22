@@ -4,29 +4,29 @@
       "number": "",
       "providerImage": "provider_indosat"
   },
-  "nominals": [
+  "packages": [
     {
-      "title": "Nominal :",
+      "title": "Paket Data S",
       "subtitle": "25.000",
       "buttonTitle": 25000
     },
     {
-      "title": "Nominal :",
+      "title": "Paket Data M",
       "subtitle": "50.000",
       "buttonTitle": 50000
     },
     {
-      "title": "Nominal :",
+      "title": "Paket Data L",
       "subtitle": "100.000",
       "buttonTitle": 100000
     },
     {
-      "title": "Nominal :",
+      "title": "Paket Data XL",
       "subtitle": "150.000",
       "buttonTitle": 150000
     },
     {
-      "title": "Nominal :",
+      "title": "Paket Data XXL",
       "subtitle": "195.000",
       "buttonTitle": 195000
     }

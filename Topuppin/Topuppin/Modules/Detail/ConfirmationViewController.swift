@@ -41,7 +41,6 @@ class ConfirmationViewController: UIViewController {
         }
     }
 
-
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -137,6 +136,7 @@ extension ConfirmationViewController: UICollectionViewDelegate, UICollectionView
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PaymentDetailsCollectionViewCell.identifier,
                 for: indexPath) as! PaymentDetailsCollectionViewCell
+            cell.configure(with: loanData.order)
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(
