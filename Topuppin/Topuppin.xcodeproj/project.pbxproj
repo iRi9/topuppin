@@ -26,7 +26,7 @@
 		63CF292B29A08E1500F2E20D /* PhoneNumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF292929A08E1500F2E20D /* PhoneNumberCollectionViewCell.xib */; };
 		63CF292D29A0D4D100F2E20D /* HomepageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF292C29A0D4D100F2E20D /* HomepageLayout.swift */; };
 		63CF292F29A1121C00F2E20D /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 63CF292E29A1121C00F2E20D /* dummy.json */; };
-		63CF293129A114B100F2E20D /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF293029A114B100F2E20D /* HomepageViewModel.swift */; };
+		63CF293129A114B100F2E20D /* PulsaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF293029A114B100F2E20D /* PulsaModel.swift */; };
 		63CF293429A1D1EF00F2E20D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF293329A1D1EF00F2E20D /* UIViewController+Alert.swift */; };
 		63CF293729A1DD1D00F2E20D /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CF293629A1DD1D00F2E20D /* Detail.storyboard */; };
 		63CF293929A1DF8000F2E20D /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF293829A1DF8000F2E20D /* ConfirmationViewController.swift */; };
@@ -56,11 +56,17 @@
 		63CF297629A30F5800F2E20D /* TermConditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */; };
 		63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297729A310D600F2E20D /* PromoViewController.swift */; };
 		63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF297929A3121000F2E20D /* PromoLayout.swift */; };
-		A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */; };
+		63EF8F8A29A57D1B009AF29D /* dummy_data_package.json in Resources */ = {isa = PBXBuildFile; fileRef = 63EF8F8929A57D1B009AF29D /* dummy_data_package.json */; };
+		63EF8F8D29A5A7C8009AF29D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8F8C29A5A7C8009AF29D /* Helper.swift */; };
+		63EF8FC629A66004009AF29D /* PagedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FC529A66004009AF29D /* PagedView.swift */; };
+		63EF8FC829A6602B009AF29D /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FC729A6602B009AF29D /* TabbedView.swift */; };
+		63EF8FCA29A66046009AF29D /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FC929A66046009AF29D /* ViewPager.swift */; };
+		63EF8FCC29A66086009AF29D /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCB29A66086009AF29D /* TabCollectionViewCell.swift */; };
+		63EF8FCE29A660B8009AF29D /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCD29A660B8009AF29D /* TabItemView.swift */; };
+		63EF8FD029A66131009AF29D /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF8FCF29A66131009AF29D /* PageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.release.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.release.xcconfig"; sourceTree = "<group>"; };
 		631C355329A368DF009E0982 /* String+RemoveCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveCharacters.swift"; sourceTree = "<group>"; };
 		63CF28FB29A03F6500F2E20D /* Topuppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topuppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CF28FE29A03F6500F2E20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +88,7 @@
 		63CF292929A08E1500F2E20D /* PhoneNumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberCollectionViewCell.xib; sourceTree = "<group>"; };
 		63CF292C29A0D4D100F2E20D /* HomepageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageLayout.swift; sourceTree = "<group>"; };
 		63CF292E29A1121C00F2E20D /* dummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
-		63CF293029A114B100F2E20D /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		63CF293029A114B100F2E20D /* PulsaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsaModel.swift; sourceTree = "<group>"; };
 		63CF293329A1D1EF00F2E20D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		63CF293629A1DD1D00F2E20D /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		63CF293829A1DF8000F2E20D /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +118,14 @@
 		63CF297429A30F5800F2E20D /* TermConditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermConditionCollectionViewCell.xib; sourceTree = "<group>"; };
 		63CF297729A310D600F2E20D /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		63CF297929A3121000F2E20D /* PromoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoLayout.swift; sourceTree = "<group>"; };
-		D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Topuppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Topuppin.debug.xcconfig"; path = "Target Support Files/Pods-Topuppin/Pods-Topuppin.debug.xcconfig"; sourceTree = "<group>"; };
+		63EF8F8929A57D1B009AF29D /* dummy_data_package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummy_data_package.json; sourceTree = "<group>"; };
+		63EF8F8C29A5A7C8009AF29D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		63EF8FC529A66004009AF29D /* PagedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedView.swift; sourceTree = "<group>"; };
+		63EF8FC729A6602B009AF29D /* TabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedView.swift; sourceTree = "<group>"; };
+		63EF8FC929A66046009AF29D /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
+		63EF8FCB29A66086009AF29D /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
+		63EF8FCD29A660B8009AF29D /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		63EF8FCF29A66131009AF29D /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,28 +133,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B7B4044D196BA7CF04D5A3 /* Pods_Topuppin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CAC7B89DE7B2F3F89344DA1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D338B67BB06174C9A5F2CAA5 /* Pods_Topuppin.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		63CF28F229A03F6500F2E20D = {
 			isa = PBXGroup;
 			children = (
 				63CF28FD29A03F6500F2E20D /* Topuppin */,
 				63CF28FC29A03F6500F2E20D /* Products */,
-				E2E6FEABEABF6959CD906040 /* Pods */,
-				2CAC7B89DE7B2F3F89344DA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,11 +158,13 @@
 		63CF28FD29A03F6500F2E20D /* Topuppin */ = {
 			isa = PBXGroup;
 			children = (
+				63EF8F8B29A5A7B5009AF29D /* Helper */,
 				63CF293229A1D1D100F2E20D /* Extenstions */,
 				63CF291329A0451D00F2E20D /* Modules */,
 				63CF291229A044F100F2E20D /* Base */,
 				63CF290C29A03F6800F2E20D /* Info.plist */,
 				63CF292E29A1121C00F2E20D /* dummy.json */,
+				63EF8F8929A57D1B009AF29D /* dummy_data_package.json */,
 			);
 			path = Topuppin;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 		63CF291329A0451D00F2E20D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				63EF8FC429A65F3F009AF29D /* Viewpager */,
 				63CF291429A0453600F2E20D /* Homepage */,
 				63CF293529A1DCF000F2E20D /* Detail */,
 				63CF296329A2F2E200F2E20D /* Promo */,
@@ -196,7 +200,7 @@
 				63CF291729A054E200F2E20D /* PulsaViewController.swift */,
 				63CF291929A054F900F2E20D /* DataPackageViewController.swift */,
 				63CF292C29A0D4D100F2E20D /* HomepageLayout.swift */,
-				63CF293029A114B100F2E20D /* HomepageViewModel.swift */,
+				63CF293029A114B100F2E20D /* PulsaModel.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -283,13 +287,25 @@
 			path = "Custom View";
 			sourceTree = "<group>";
 		};
-		E2E6FEABEABF6959CD906040 /* Pods */ = {
+		63EF8F8B29A5A7B5009AF29D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */,
-				49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */,
+				63EF8F8C29A5A7C8009AF29D /* Helper.swift */,
 			);
-			path = Pods;
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		63EF8FC429A65F3F009AF29D /* Viewpager */ = {
+			isa = PBXGroup;
+			children = (
+				63EF8FC529A66004009AF29D /* PagedView.swift */,
+				63EF8FC729A6602B009AF29D /* TabbedView.swift */,
+				63EF8FC929A66046009AF29D /* ViewPager.swift */,
+				63EF8FCB29A66086009AF29D /* TabCollectionViewCell.swift */,
+				63EF8FCD29A660B8009AF29D /* TabItemView.swift */,
+				63EF8FCF29A66131009AF29D /* PageCollectionViewCell.swift */,
+			);
+			path = Viewpager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +315,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63CF290F29A03F6800F2E20D /* Build configuration list for PBXNativeTarget "Topuppin" */;
 			buildPhases = (
-				AE7F69A3E1624C5F9D0EAA98 /* [CP] Check Pods Manifest.lock */,
 				63CF28F729A03F6500F2E20D /* Sources */,
 				63CF28F829A03F6500F2E20D /* Frameworks */,
 				63CF28F929A03F6500F2E20D /* Resources */,
-				6D145598E7198AB8063D5CB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +373,7 @@
 				63CF290829A03F6800F2E20D /* Assets.xcassets in Resources */,
 				63CF293729A1DD1D00F2E20D /* Detail.storyboard in Resources */,
 				63CF295229A26CB700F2E20D /* PinCollectionViewCell.xib in Resources */,
+				63EF8F8A29A57D1B009AF29D /* dummy_data_package.json in Resources */,
 				63CF294A29A20C2900F2E20D /* InfoCollectionViewCell.xib in Resources */,
 				63CF292B29A08E1500F2E20D /* PhoneNumberCollectionViewCell.xib in Resources */,
 				63CF292529A0879900F2E20D /* PromotionCollectionViewCell.xib in Resources */,
@@ -375,48 +390,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6D145598E7198AB8063D5CB2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Topuppin/Pods-Topuppin-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE7F69A3E1624C5F9D0EAA98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Topuppin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		63CF28F729A03F6500F2E20D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -429,6 +402,8 @@
 				63CF292D29A0D4D100F2E20D /* HomepageLayout.swift in Sources */,
 				63CF297829A310D600F2E20D /* PromoViewController.swift in Sources */,
 				63CF28FF29A03F6500F2E20D /* AppDelegate.swift in Sources */,
+				63EF8F8D29A5A7C8009AF29D /* Helper.swift in Sources */,
+				63EF8FCC29A66086009AF29D /* TabCollectionViewCell.swift in Sources */,
 				63CF294929A20C2900F2E20D /* InfoCollectionViewCell.swift in Sources */,
 				63CF295C29A29FFE00F2E20D /* PaymentDetailViewController.swift in Sources */,
 				631C355429A368DF009E0982 /* String+RemoveCharacters.swift in Sources */,
@@ -437,7 +412,8 @@
 				63CF297A29A3121000F2E20D /* PromoLayout.swift in Sources */,
 				63CF296929A3062400F2E20D /* HeaderPromoCollectionViewCell.swift in Sources */,
 				63CF290129A03F6500F2E20D /* SceneDelegate.swift in Sources */,
-				63CF293129A114B100F2E20D /* HomepageViewModel.swift in Sources */,
+				63CF293129A114B100F2E20D /* PulsaModel.swift in Sources */,
+				63EF8FC629A66004009AF29D /* PagedView.swift in Sources */,
 				63CF297129A3090400F2E20D /* VoucherCollectionViewCell.swift in Sources */,
 				63CF297529A30F5800F2E20D /* TermConditionCollectionViewCell.swift in Sources */,
 				63CF291A29A054F900F2E20D /* DataPackageViewController.swift in Sources */,
@@ -446,13 +422,17 @@
 				63CF291D29A07FAD00F2E20D /* FooterCollectionReusableView.swift in Sources */,
 				63CF291629A0492200F2E20D /* HomepageViewController.swift in Sources */,
 				63CF296D29A3079600F2E20D /* PromoDateCollectionViewCell.swift in Sources */,
+				63EF8FC829A6602B009AF29D /* TabbedView.swift in Sources */,
+				63EF8FCE29A660B8009AF29D /* TabItemView.swift in Sources */,
 				63CF292429A0879900F2E20D /* PromotionCollectionViewCell.swift in Sources */,
 				63CF296229A2A6EA00F2E20D /* PaymentLayout.swift in Sources */,
+				63EF8FD029A66131009AF29D /* PageCollectionViewCell.swift in Sources */,
 				63CF292A29A08E1500F2E20D /* PhoneNumberCollectionViewCell.swift in Sources */,
 				63CF295829A2714500F2E20D /* UIView+DottedLine.swift in Sources */,
 				63CF292029A0809000F2E20D /* NominalCollectionViewCell.swift in Sources */,
 				63CF294D29A26C2300F2E20D /* PaymentDetailsCollectionViewCell.swift in Sources */,
 				63CF295529A26CD300F2E20D /* OrderDetailCollectionViewCell.swift in Sources */,
+				63EF8FCA29A66046009AF29D /* ViewPager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +574,6 @@
 		};
 		63CF291029A03F6800F2E20D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED5E365F3006518F8FC1E2B6 /* Pods-Topuppin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -628,7 +607,6 @@
 		};
 		63CF291129A03F6800F2E20D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49719FBB913CF66AF1D1B3E8 /* Pods-Topuppin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

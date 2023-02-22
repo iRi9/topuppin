@@ -6,15 +6,21 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import ContactsUI
 
-class DataPackageViewController: UIViewController, IndicatorInfoProvider {
+protocol DataPackageaDelegate: AnyObject {
+    func didSelectNominal(loanData: ConfirmationModel)
+    func didSeletPromotion(promo: Promo)
+}
+
+class DataPackageViewController: UIViewController {
+
+    weak var delegate: DataPackageaDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     var contactPicker: CNContactPickerViewController!
-    var homepageVM: HomepageViewModel!
+    var dataPackageModel: DataPackageModel!
     var phoneNumberModel: PhoneNumberModel!
     var isInputEmpty = true {
         didSet {
@@ -28,15 +34,11 @@ class DataPackageViewController: UIViewController, IndicatorInfoProvider {
         contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self
 
-        homepageVM = loadData()
-        phoneNumberModel = homepageVM.phone
+        dataPackageModel = loadData()
+        phoneNumberModel = dataPackageModel.phone
         isInputEmpty = phoneNumberModel.number.isEmpty
         setupCollectionView()
         setupCollectionLayout()
-    }
-
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Data Package")
     }
 
     func setupCollectionView() {
@@ -57,15 +59,15 @@ class DataPackageViewController: UIViewController, IndicatorInfoProvider {
                                 forCellWithReuseIdentifier: PromotionCollectionViewCell.identifier)
     }
 
-    func loadData() -> HomepageViewModel {
-        guard let path = Bundle(for: type(of: self)).path(forResource: "dummy", ofType: "json") else {
+    func loadData() -> DataPackageModel {
+        guard let path = Bundle(for: type(of: self)).path(forResource: "dummy_data_package", ofType: "json") else {
             fatalError("dummy.json not found")
         }
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        let homepageVM = try! decoder.decode(HomepageViewModel.self, from: data)
-        return homepageVM
+        let dataPackageModel = try! decoder.decode(DataPackageModel.self, from: data)
+        return dataPackageModel
     }
 
     func setupCollectionLayout() {
@@ -99,13 +101,13 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
                         numberOfItemsInSection section: Int) -> Int {
         if !isInputEmpty {
             switch section {
-            case 1: return homepageVM.nominals.count
-            case 2: return homepageVM.promos.count
+            case 1: return dataPackageModel.packages.count
+            case 2: return dataPackageModel.promos.count
             default: return 1
             }
         } else {
             switch section {
-            case 1: return homepageVM.promos.count
+            case 1: return dataPackageModel.promos.count
             default: return 1
             }
         }
@@ -126,7 +128,7 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
                 let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: PromotionCollectionViewCell.identifier,
                     for: indexPath) as! PromotionCollectionViewCell
-                let promos = homepageVM.promos
+                let promos = dataPackageModel.promos
                 cell.configure(with: promos[indexPath.item])
                 return cell
             } else {
@@ -134,15 +136,15 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
                     withReuseIdentifier: NominalCollectionViewCell.identifier,
                     for: indexPath) as! NominalCollectionViewCell
                 cell.delegate = self
-                cell.hideSeparator(indexPath.item == homepageVM.nominals.count - 1)
-                cell.configure(with: homepageVM.nominals[indexPath.item])
+                cell.hideSeparator(indexPath.item == dataPackageModel.packages.count - 1)
+                cell.configure(with: dataPackageModel.packages[indexPath.item])
                 return cell
             }
         case 2:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PromotionCollectionViewCell.identifier,
                 for: indexPath) as! PromotionCollectionViewCell
-            let promos = homepageVM.promos
+            let promos = dataPackageModel.promos
             cell.configure(with: promos[indexPath.item])
             return cell
         default:
@@ -168,12 +170,8 @@ extension DataPackageViewController: UICollectionViewDelegate, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if isInputEmpty, indexPath.section == 1 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: homepageVM.promos[indexPath.item])
-        } else if !isInputEmpty, indexPath.section == 2 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: homepageVM.promos[indexPath.item])
+        if (isInputEmpty && indexPath.section == 1) || (!isInputEmpty && indexPath.section == 2) {
+            delegate?.didSeletPromotion(promo: dataPackageModel.promos[indexPath.item])
         }
     }
 }
@@ -207,23 +205,12 @@ extension DataPackageViewController: CNContactPickerDelegate {
 // MARK: NominalCellDelegate -
 extension DataPackageViewController: NominalCellDelegate {
     func didSelectNominal(at index: Int) {
+        let dataPackage = dataPackageModel.packages[index]
         let loanData = ConfirmationModel(phoneNumber: phoneNumberModel.number,
                                          providerImage: phoneNumberModel.providerImage,
-                                         nominal: homepageVM.nominals[index].subtitle)
-        performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ConfirmationViewController" {
-            if let confirmationVC = segue.destination as? ConfirmationViewController,
-               let confirmationModel = sender as? ConfirmationModel {
-                confirmationVC.loanData = confirmationModel
-            }
-        } else if segue.identifier == "PromoViewController" {
-            if let promoVC = segue.destination as? PromoViewController,
-               let promoModel = sender as? Promo {
-                promoVC.promo = promoModel
-            }
-        }
+                                         order: PaymentDetailModel(productName: dataPackage.title,
+                                                                   productPrice: dataPackage.buttonTitle,
+                                                                   adminFee: 0))
+        delegate?.didSelectNominal(loanData: loanData)
     }
 }

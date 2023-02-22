@@ -34,13 +34,11 @@ class ConfirmationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PaymentDetail",
            let pin = pin, !pin.isEmpty {
-            if let navigationVC = segue.destination as? UINavigationController,
-               let paymentVC = navigationVC.topViewController as? PaymentDetailViewController {
+            if let paymentVC = segue.destination as? PaymentDetailViewController {
                 paymentVC.loanData = loanData
             }
         }
     }
-
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -137,6 +135,7 @@ extension ConfirmationViewController: UICollectionViewDelegate, UICollectionView
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PaymentDetailsCollectionViewCell.identifier,
                 for: indexPath) as! PaymentDetailsCollectionViewCell
+            cell.configure(with: loanData.order)
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(

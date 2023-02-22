@@ -7,10 +7,16 @@
 
 import Foundation
 
-// MARK: - HomepageViewModel
-struct HomepageViewModel: Decodable {
+// MARK: - PulsaModel
+struct PulsaModel: Decodable {
     let phone: PhoneNumberModel
     let nominals: [NominalModel]
+    let promos: [Promo]
+}
+
+struct DataPackageModel: Decodable {
+    let phone: PhoneNumberModel
+    let packages: [NominalModel]
     let promos: [Promo]
 }
 

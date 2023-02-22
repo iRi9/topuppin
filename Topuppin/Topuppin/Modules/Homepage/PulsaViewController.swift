@@ -6,15 +6,21 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import ContactsUI
 
-class PulsaViewController: UIViewController, IndicatorInfoProvider {
+protocol PulsaDelegate: AnyObject {
+    func didSelectNominal(loanData: ConfirmationModel)
+    func didSeletPromotion(promo: Promo)
+}
+
+class PulsaViewController: UIViewController {
+
+    weak var delegate: PulsaDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     var contactPicker: CNContactPickerViewController!
-    var homepageVM: HomepageViewModel!
+    var pulsaModel: PulsaModel!
     var phoneNumberModel: PhoneNumberModel!
     var isInputEmpty = true {
         didSet {
@@ -28,15 +34,11 @@ class PulsaViewController: UIViewController, IndicatorInfoProvider {
         contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self
 
-        homepageVM = loadData()
-        phoneNumberModel = homepageVM.phone
+        pulsaModel = loadData()
+        phoneNumberModel = pulsaModel.phone
         isInputEmpty = phoneNumberModel.number.isEmpty
         setupCollectionView()
         setupCollectionLayout()
-    }
-
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Pulsa")
     }
 
     func setupCollectionView() {
@@ -57,15 +59,15 @@ class PulsaViewController: UIViewController, IndicatorInfoProvider {
                                 forCellWithReuseIdentifier: PromotionCollectionViewCell.identifier)
     }
 
-    func loadData() -> HomepageViewModel {
+    func loadData() -> PulsaModel {
         guard let path = Bundle(for: type(of: self)).path(forResource: "dummy", ofType: "json") else {
             fatalError("dummy.json not found")
         }
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        let homepageVM = try! decoder.decode(HomepageViewModel.self, from: data)
-        return homepageVM
+        let pulsaModel = try! decoder.decode(PulsaModel.self, from: data)
+        return pulsaModel
     }
 
     func setupCollectionLayout() {
@@ -98,13 +100,13 @@ extension PulsaViewController: UICollectionViewDelegate, UICollectionViewDataSou
                         numberOfItemsInSection section: Int) -> Int {
         if !isInputEmpty {
             switch section {
-            case 1: return homepageVM.nominals.count
-            case 2: return homepageVM.promos.count
+            case 1: return pulsaModel.nominals.count
+            case 2: return pulsaModel.promos.count
             default: return 1
             }
         } else {
             switch section {
-            case 1: return homepageVM.promos.count
+            case 1: return pulsaModel.promos.count
             default: return 1
             }
         }
@@ -125,7 +127,7 @@ extension PulsaViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: PromotionCollectionViewCell.identifier,
                     for: indexPath) as! PromotionCollectionViewCell
-                let promos = homepageVM.promos
+                let promos = pulsaModel.promos
                 cell.configure(with: promos[indexPath.item])
                 return cell
             } else {
@@ -133,15 +135,15 @@ extension PulsaViewController: UICollectionViewDelegate, UICollectionViewDataSou
                     withReuseIdentifier: NominalCollectionViewCell.identifier,
                     for: indexPath) as! NominalCollectionViewCell
                 cell.delegate = self
-                cell.hideSeparator(indexPath.item == homepageVM.nominals.count - 1)
-                cell.configure(with: homepageVM.nominals[indexPath.item])
+                cell.hideSeparator(indexPath.item == pulsaModel.nominals.count - 1)
+                cell.configure(with: pulsaModel.nominals[indexPath.item])
                 return cell
             }
         case 2:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PromotionCollectionViewCell.identifier,
                 for: indexPath) as! PromotionCollectionViewCell
-            let promos = homepageVM.promos
+            let promos = pulsaModel.promos
             cell.configure(with: promos[indexPath.item])
             return cell
         default:
@@ -167,12 +169,8 @@ extension PulsaViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if isInputEmpty, indexPath.section == 1 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: homepageVM.promos[indexPath.item])
-        } else if !isInputEmpty, indexPath.section == 2 {
-            performSegue(withIdentifier: "PromoViewController",
-                         sender: homepageVM.promos[indexPath.item])
+        if (isInputEmpty && indexPath.section == 1) || (!isInputEmpty && indexPath.section == 2) {
+            delegate?.didSeletPromotion(promo: pulsaModel.promos[indexPath.item])
         }
     }
 }
@@ -206,23 +204,12 @@ extension PulsaViewController: CNContactPickerDelegate {
 // MARK: NominalCellDelegate -
 extension PulsaViewController: NominalCellDelegate {
     func didSelectNominal(at index: Int) {
+        let nominal = pulsaModel.nominals[index]
         let loanData = ConfirmationModel(phoneNumber: phoneNumberModel.number,
                                          providerImage: phoneNumberModel.providerImage,
-                                         nominal: homepageVM.nominals[index].subtitle)
-        performSegue(withIdentifier: "ConfirmationViewController", sender: loanData)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ConfirmationViewController" {
-            if let confirmationVC = segue.destination as? ConfirmationViewController,
-               let confirmationModel = sender as? ConfirmationModel {
-                confirmationVC.loanData = confirmationModel
-            }
-        } else if segue.identifier == "PromoViewController" {
-            if let promoVC = segue.destination as? PromoViewController,
-               let promoModel = sender as? Promo {
-                promoVC.promo = promoModel
-            }
-        }
+                                         order: PaymentDetailModel(productName: "Pulsa",
+                                                                   productPrice: nominal.buttonTitle,
+                                                                   adminFee: 0))
+        delegate?.didSelectNominal(loanData: loanData)
     }
 }
